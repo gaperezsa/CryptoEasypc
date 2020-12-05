@@ -1,0 +1,149 @@
+2020-11-08 15:45:41 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:46:22 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:46:37 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:47:45 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:50:12 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:50:17 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:50:21 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:56:52 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:56:55 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:57:01 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:57:13 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:57:42 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:58:28 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 15:58:31 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:03:24 TRACE com.se2.easypc.controller.CPUController CPUController:54 - createCPU query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:11:20 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:11:35 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:11:42 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:17:04 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:17:08 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:17:10 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:21 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:24 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:31 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:42 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:44 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:18:47 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:20:35 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:20:39 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:20:41 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:20:44 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:20:50 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:21:09 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:21:41 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:22:59 TRACE com.se2.easypc.controller.CPUController CPUController:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:23:02 TRACE com.se2.easypc.controller.CPUController CPUController:44 - getCPUById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:26:29 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:26:40 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:26:47 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:27:30 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:27:33 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:27:34 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:27:35 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:28:12 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:28:20 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:29:01 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:30:08 TRACE com.se2.easypc.controller.CPUController CPUController:44 - getCPUById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:30:59 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:31:03 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:38:06 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:38:16 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:38:50 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:43 - getMotherboardById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:39:17 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:39:37 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:39:47 TRACE com.se2.easypc.controller.CPUController CPUController:92 - updateCompatibleMotherboards query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:39:50 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:43:20 TRACE com.se2.easypc.controller.CPUController CPUController:44 - getCPUById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:43:59 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:44:10 TRACE com.se2.easypc.controller.CPUController CPUController:74 - getCompatibleMotherboardsById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:44:30 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:44:43 TRACE com.se2.easypc.controller.CPUController CPUController:44 - getCPUById query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:45:08 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:45:11 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:45:37 TRACE com.se2.easypc.controller.CPUController CPUController:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 16:47:26 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 16:47:36 TRACE com.se2.easypc.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 17:44:48 TRACE com.se2.easypc.controller.QuizController QuizController:36 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 17:44:48 TRACE com.se2.easypc.service.QuizService QuizService:63 - Quiz answers received
+2020-11-08 17:45:11 TRACE com.se2.easypc.controller.QuizController QuizController:45 - getRecommendedBuildPrice query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 17:45:11 TRACE com.se2.easypc.service.QuizService QuizService:63 - Quiz answers received
+2020-11-08 21:27:13 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 21:30:42 TRACE com.se2.easypc.controller.BuildController BuildController getAllBuilds:40 - Query from 0:0:0:0:0:0:0:1
+2020-11-08 21:33:49 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:49 -  Query from 0:0:0:0:0:0:0:1
+2020-11-08 21:33:49 WARN  com.se2.easypc.service.BuildService BuildService getBuildById:49 - com.se2.easypc.exception.ResourceNotFoundException: Build not found with id : '99999'
+2020-11-08 21:54:15 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 21:54:20 TRACE com.se2.easypc.controller.BuildController BuildController getAllBuilds:40 - 0:0:0:0:0:0:0:1
+2020-11-08 22:09:37 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 22:10:09 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 22:10:09 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:63 - Quiz answers received
+2020-11-08 22:10:37 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 22:25:26 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:35 TRACE com.se2.easypc.controller.CPUController CPUController deleteCPU:63 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:35 WARN  com.se2.easypc.service.CPUService CPUService deleteCPU:57 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '12'
+2020-11-08 22:25:39 TRACE com.se2.easypc.controller.CPUController CPUController deleteCPU:63 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:46 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-08 22:30:49 TRACE com.se2.easypc.controller.CPUController CPUController getCPUById:44 - 0:0:0:0:0:0:0:1
+2020-11-08 22:30:49 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '55'
+2020-11-08 22:31:00 TRACE com.se2.easypc.controller.CPUController CPUController getCPUById:44 - 0:0:0:0:0:0:0:1
+2020-11-08 22:31:00 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '88'
+2020-11-08 23:34:15 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:50 - 0:0:0:0:0:0:0:1
+2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuildPrice:45 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:66 - Quiz answers received
+2020-11-13 11:19:41 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:66 - Quiz answers received
+2020-11-13 11:21:05 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:08 TRACE com.se2.easypc.controller.CPUController CPUController getCompatibleMotherboardsById:74 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:10 TRACE com.se2.easypc.controller.RAMController RAMController getAllRAMs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:13 TRACE com.se2.easypc.controller.GPUController GPUController getAllGPUs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:15 TRACE com.se2.easypc.controller.CoolingController CoolingController getAllCoolings:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:18 TRACE com.se2.easypc.controller.SSDController SSDController getAllSSDs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:21 TRACE com.se2.easypc.controller.HDDController HDDController getAllHDDs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:25 TRACE com.se2.easypc.controller.PowerSupplyController PowerSupplyController getAllPowerSupplies:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:28 TRACE com.se2.easypc.controller.MouseController MouseController getAllMice:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:31 TRACE com.se2.easypc.controller.KeyboardController KeyboardController getAllKeyboards:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:34 TRACE com.se2.easypc.controller.MonitorController MonitorController getAllMonitors:32 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:37 TRACE com.se2.easypc.controller.CaseController CaseController getAllCases:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:50 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getBuildPriceById:85 - 0:0:0:0:0:0:0:1
+2020-11-13 11:24:42 TRACE com.se2.easypc.controller.UserController UserController getAllUsers:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:29:53 TRACE com.se2.easypc.controller.UserController UserController createUser:53 - 0:0:0:0:0:0:0:1
+2020-11-13 11:38:48 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:38:48 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:54:59 TRACE com.se2.easypc.controller.BuildController BuildController getBuildsByUser:104 - 0:0:0:0:0:0:0:1
+2020-11-13 12:22:00 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:24:59 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:28:32 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:30:02 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:31:26 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:32:57 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:33:46 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:46:45 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
+2020-11-13 12:46:45 WARN  com.se2.easypc.service.UserService UserService createUser:52 - java.lang.IllegalArgumentException: rawPassword cannot be null
+2020-11-13 12:47:09 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
+2020-11-13 13:18:01 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 13:22:35 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 13:48:32 TRACE com.se2.easypc.controller.CaseController CaseController getAllCases:34 - 0:0:0:0:0:0:0:1
+2020-11-13 13:48:40 TRACE com.se2.easypc.controller.CaseController CaseController getCaseById:43 - 0:0:0:0:0:0:0:1
+2020-11-13 13:50:12 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 13:55:18 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 13:56:43 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:09:37 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:12:24 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:13:06 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 14:15:16 TRACE com.se2.easypc.controller.CaseController CaseController deleteCase:62 - 0:0:0:0:0:0:0:1
+2020-11-13 14:24:39 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-13 14:26:22 TRACE com.se2.easypc.controller.MotherboardController MotherboardController updateCompatibleCPUs:91 - 0:0:0:0:0:0:0:1
+2020-11-13 14:29:46 TRACE com.se2.easypc.controller.MotherboardController MotherboardController updateCompatibleCPUs:91 - 0:0:0:0:0:0:0:1
+2020-11-13 14:30:55 TRACE com.se2.easypc.controller.GPUController GPUController getAllGPUs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 14:33:43 TRACE com.se2.easypc.controller.GPUController GPUController createGPU:53 - 0:0:0:0:0:0:0:1
+2020-11-20 13:08:13 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-20 13:08:13 TRACE com.se2.easypc.service.template.BeginnerQuizService BeginnerQuizService checkAnswers:69 - Quiz answers received
+2020-11-20 13:09:13 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-20 13:09:13 TRACE com.se2.easypc.service.template.BeginnerQuizService BeginnerQuizService checkAnswers:69 - Quiz answers received

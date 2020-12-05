@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="andre (generated)" id="1601678403461-1">
+        <createTable tableName="admin">
+            <column autoIncrement="true" name="id_admin" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-2">
+        <createTable tableName="build">
+            <column autoIncrement="true" name="id_build" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_user" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_mouse" type="INT"/>
+            <column name="id_keyboard" type="INT"/>
+            <column name="id_monitor" type="INT"/>
+            <column name="id_motherboard" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cpu" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_gpu" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_ram" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cooling" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_ssd" type="INT"/>
+            <column name="id_hdd" type="INT"/>
+            <column name="id_powersupply" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_case" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-3">
+        <createTable tableName="case">
+            <column autoIncrement="true" name="id_case" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-4">
+        <createTable tableName="compatiblecpu">
+            <column autoIncrement="true" name="id_compatible_cpu" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_cpu" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_motherboard" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-5">
+        <createTable tableName="compatibleram">
+            <column autoIncrement="true" name="id_compatible_ram" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_ram" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_motherboard" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-6">
+        <createTable tableName="cooling">
+            <column autoIncrement="true" name="id_cooling" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-7">
+        <createTable tableName="cpu">
+            <column autoIncrement="true" name="id_cpu" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cores" type="INT"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-8">
+        <createTable tableName="gpu">
+            <column autoIncrement="true" name="id_gpu" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="memory" type="INT"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-9">
+        <createTable tableName="hdd">
+            <column autoIncrement="true" name="id_hdd" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="memory" type="INT"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-10">
+        <createTable tableName="keyboard">
+            <column autoIncrement="true" name="id_keyboard" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-11">
+        <createTable tableName="monitor">
+            <column autoIncrement="true" name="id_monitor" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-12">
+        <createTable tableName="motherboard">
+            <column autoIncrement="true" name="id_motherboard" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-13">
+        <createTable tableName="mouse">
+            <column autoIncrement="true" name="id_mouse" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-14">
+        <createTable tableName="powersupply">
+            <column autoIncrement="true" name="id_powersupply" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-15">
+        <createTable tableName="ram">
+            <column autoIncrement="true" name="id_ram" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="memory" type="INT"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-16">
+        <createTable tableName="ssd">
+            <column autoIncrement="true" name="id_ssd" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="memory" type="INT"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-17">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id_user" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-18">
+        <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="admin"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-19">
+        <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="user"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-20">
+        <createIndex indexName="fk_Build_CPU1_idx" tableName="build">
+            <column name="id_cpu"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-21">
+        <createIndex indexName="fk_Build_Case1_idx" tableName="build">
+            <column name="id_case"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-22">
+        <createIndex indexName="fk_Build_Cooling1_idx" tableName="build">
+            <column name="id_cooling"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-23">
+        <createIndex indexName="fk_Build_GPU1_idx" tableName="build">
+            <column name="id_gpu"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-24">
+        <createIndex indexName="fk_Build_HDD1_idx" tableName="build">
+            <column name="id_hdd"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-25">
+        <createIndex indexName="fk_Build_Keyboard1_idx" tableName="build">
+            <column name="id_keyboard"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-26">
+        <createIndex indexName="fk_Build_Monitor1_idx" tableName="build">
+            <column name="id_monitor"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-27">
+        <createIndex indexName="fk_Build_Motherboard1_idx" tableName="build">
+            <column name="id_motherboard"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-28">
+        <createIndex indexName="fk_Build_Mouse1_idx" tableName="build">
+            <column name="id_mouse"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-29">
+        <createIndex indexName="fk_Build_Power Supply1_idx" tableName="build">
+            <column name="id_powersupply"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-30">
+        <createIndex indexName="fk_Build_RAM1_idx" tableName="build">
+            <column name="id_ram"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-31">
+        <createIndex indexName="fk_Build_SSD1_idx" tableName="build">
+            <column name="id_ssd"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-32">
+        <createIndex indexName="fk_Build_User_idx" tableName="build">
+            <column name="id_user"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-33">
+        <createIndex indexName="fk_CompatibleCPU_CPU1_idx" tableName="compatiblecpu">
+            <column name="id_cpu"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-34">
+        <createIndex indexName="fk_CompatibleCPU_Motherboard1_idx" tableName="compatiblecpu">
+            <column name="id_motherboard"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-35">
+        <createIndex indexName="fk_CompatibleRAM_Motherboard1_idx" tableName="compatibleram">
+            <column name="id_motherboard"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-36">
+        <createIndex indexName="fk_CompatibleRAM_RAM1_idx" tableName="compatibleram">
+            <column name="id_ram"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-37">
+        <addForeignKeyConstraint baseColumnNames="id_cpu" baseTableName="build" constraintName="fk_Build_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cpu" referencedTableName="cpu"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-38">
+        <addForeignKeyConstraint baseColumnNames="id_case" baseTableName="build" constraintName="fk_Build_Case1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_case" referencedTableName="case"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-39">
+        <addForeignKeyConstraint baseColumnNames="id_cooling" baseTableName="build" constraintName="fk_Build_Cooling1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cooling" referencedTableName="cooling"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-40">
+        <addForeignKeyConstraint baseColumnNames="id_gpu" baseTableName="build" constraintName="fk_Build_GPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_gpu" referencedTableName="gpu"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-41">
+        <addForeignKeyConstraint baseColumnNames="id_hdd" baseTableName="build" constraintName="fk_Build_HDD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_hdd" referencedTableName="hdd"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-42">
+        <addForeignKeyConstraint baseColumnNames="id_keyboard" baseTableName="build" constraintName="fk_Build_Keyboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_keyboard" referencedTableName="keyboard"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-43">
+        <addForeignKeyConstraint baseColumnNames="id_monitor" baseTableName="build" constraintName="fk_Build_Monitor1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_monitor" referencedTableName="monitor"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-44">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="build" constraintName="fk_Build_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-45">
+        <addForeignKeyConstraint baseColumnNames="id_mouse" baseTableName="build" constraintName="fk_Build_Mouse1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_mouse" referencedTableName="mouse"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-46">
+        <addForeignKeyConstraint baseColumnNames="id_powersupply" baseTableName="build" constraintName="fk_Build_Power Supply1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_powersupply" referencedTableName="powersupply"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-47">
+        <addForeignKeyConstraint baseColumnNames="id_ram" baseTableName="build" constraintName="fk_Build_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ram" referencedTableName="ram"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-48">
+        <addForeignKeyConstraint baseColumnNames="id_ssd" baseTableName="build" constraintName="fk_Build_SSD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ssd" referencedTableName="ssd"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-49">
+        <addForeignKeyConstraint baseColumnNames="id_user" baseTableName="build" constraintName="fk_Build_User" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_user" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-50">
+        <addForeignKeyConstraint baseColumnNames="id_cpu" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cpu" referencedTableName="cpu"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-51">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-52">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-53">
+        <addForeignKeyConstraint baseColumnNames="id_ram" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ram" referencedTableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-case-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-case-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-case-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-case-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cooling-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cooling-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-cooling-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-cooling-link_picture3"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cpu-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cpu-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-gpu-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-gpu-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-hdd-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-hdd-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-keyboard-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-keyboard-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-keyboard-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-keyboard-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-monitor-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-monitor-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-monitor-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-monitor-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-motherboard-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-motherboard-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <!--SSD-->
+<changeSet  author="Andres+Alejandra"  id="_fix-link-length-ssd-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-ssd-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+<!---->
+
+<!--RAM-->
+<changeSet  author="Andres+Alejandra"  id="_fix-link-length-ram-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-ram-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+        <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+<!---->
+
+<!--power-->
+<changeSet  author="Andres+Alejandra"  id="_fix-link-length-powersupply-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-powersupply-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-powersupply-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-powersupply-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <!---->
+
+<!--mouse-->
+<changeSet  author="Andres+Alejandra"  id="_fix-link-length-mouse-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-link-length-mouse-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-mouse-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="_fix-length-mouse-link_picture2"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+
+    <changeSet  author="Andres"  id="fix-length-model-case"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-cooling"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-cpu"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-gpu"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-hdd"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-keyboard"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-monitor"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-motherboard"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-mouse"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-powersupply"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-ram"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-ssd"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-RAMCompatibilty">  
+        <dropTable  cascadeConstraints="false"  
+                schemaName="easypc"  
+                tableName="compatibleram"/>  
+    </changeSet>
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-Admin">  
+        <dropTable  cascadeConstraints="false"  
+                schemaName="easypc"  
+                tableName="admin"/>  
+    </changeSet>
+    <changeSet id="User-Roles-Creation" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="User-Role-Creation.sql"/>
+    </changeSet>
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="_fix-length-password"> 
+        <modifyDataType 
+                columnName="password"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="user"/>
+    </changeSet>
+    <changeSet id="Default-User-Creation" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/insert-initial-data.sql"/>
+    </changeSet>
+    <changeSet id="Create-beginner-builds" author="Andres+Gabriel">
+        <sqlFile dbms="mysql" path="SQL_files/beginner-builds.sql"/>
+    </changeSet>
+    <changeSet author="Andres+Gabriel+Alejandra" id="create-descriptions-table">
+        <createTable tableName="description">
+            <column autoIncrement="true" name="id_description" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="part_name" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="part_description" type="VARCHAR(1500)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Andres+Gabriel+Alejandra" id="descriptions-table-constarints">
+        <addUniqueConstraint columnNames="part_name" constraintName="part_name_UNIQUE" tableName="description"/>
+    </changeSet>
+    <changeSet id="Add-descriptions" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/insert-descriptions.sql"/>
+    </changeSet>
+    <changeSet id="Create-initial-admin" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/create-admin.sql"/>
+    </changeSet>
+    <!---->
+</databaseChangeLog>
