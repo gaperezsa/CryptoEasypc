@@ -998,4 +998,8 @@
         <sqlFile dbms="mysql" path="SQL_files/create-admin.sql"/>
     </changeSet>
     <!---->
+    <!-- AUDIT EVENTS CRIPTO-->
+    <changeSet id="audit-event" author="Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/audit-event.sql"/>
+    </changeSet>
 </databaseChangeLog>
