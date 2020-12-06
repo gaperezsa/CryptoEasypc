@@ -27,6 +27,9 @@ public class CaseController {
     @Autowired
     CaseService caseService;
 
+    @Autowired
+    AuditEventLogService AEservice;
+
     //get http request for all cases
     @GetMapping("/cases")
     public List<Case> getAllCases( HttpServletRequest request ) {
@@ -51,6 +54,9 @@ public class CaseController {
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName() + " of Case with model " + caseObj.getModel(), admin,  request.getRemoteAddr());
+
         //return the corresponding service logical function
         return caseService.createCase(caseObj);
     }
@@ -60,6 +66,9 @@ public class CaseController {
     public ResponseEntity<Void> deleteCase(@PathVariable(value = "id") Long caseId , HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() + " of Case with id " + caseId, admin,  request.getRemoteAddr());
+        
         caseService.deleteCase(caseId);
         //Check deletion
         return ResponseEntity.ok().build();

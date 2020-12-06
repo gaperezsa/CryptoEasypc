@@ -27,6 +27,9 @@ public class GPUController {
     @Autowired
     GPUService gpuService;
 
+    @Autowired
+    AuditEventLogService AEservice;
+
     //get http request for all gpus
     @GetMapping("/gpus")
     public List<GPU> getAllGPUs(HttpServletRequest request) {
@@ -51,6 +54,9 @@ public class GPUController {
     public GPU createGPU(@Valid @RequestBody GPU gpu, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName() + " of GPU with model " + gpu.getModel(), admin,  request.getRemoteAddr());
+        
         //return the corresponding service logical function
         return gpuService.createGPU(gpu);
     }
@@ -60,6 +66,9 @@ public class GPUController {
     public ResponseEntity<Void> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() + " of Cooling with id " + gpuId, admin,  request.getRemoteAddr());
+        
         //call the corresponding service logical function
         gpuService.deleteGPU(gpuId);
         //Check deletion

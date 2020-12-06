@@ -27,6 +27,9 @@ public class KeyboardController {
     @Autowired
     KeyboardService keyboardService;
     
+    @Autowired
+    AuditEventLogService AEservice;
+    
     //get http request for all keyboards
     @GetMapping("/keyboards")
     public List<Keyboard> getAllKeyboards( HttpServletRequest request) {
@@ -51,6 +54,8 @@ public class KeyboardController {
     public Keyboard createKeyboard(@Valid @RequestBody Keyboard keyboard, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName() + " of Keyboard with model " + keyboard.getModel(), admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return keyboardService.createKeyboard(keyboard);
     }
@@ -60,6 +65,9 @@ public class KeyboardController {
     public ResponseEntity<Void> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() + " of Keyboard with id " + keyboardId, admin,  request.getRemoteAddr());
+
         //call the corresponding service logical function
         keyboardService.deleteKeyboard(keyboardId);
         //Check deletion

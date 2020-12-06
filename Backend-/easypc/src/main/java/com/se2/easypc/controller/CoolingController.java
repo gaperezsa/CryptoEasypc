@@ -27,6 +27,9 @@ public class CoolingController {
     @Autowired
     CoolingService coolingService;
 
+    @Autowired
+    AuditEventLogService AEservice;
+
     //get http request for all coolings
     @GetMapping("/coolings")
     public List<Cooling> getAllCoolings( HttpServletRequest request ) {
@@ -51,6 +54,8 @@ public class CoolingController {
     public Cooling createCooling(@Valid @RequestBody Cooling cooling, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName() + " of Cooling with model " + cooling.getModel(), admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return coolingService.createCooling(cooling);
     }
@@ -60,6 +65,8 @@ public class CoolingController {
     public ResponseEntity<Void> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() + " of Cooling with id " + coolingId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         coolingService.deleteCooling(coolingId);
         //Check deletion

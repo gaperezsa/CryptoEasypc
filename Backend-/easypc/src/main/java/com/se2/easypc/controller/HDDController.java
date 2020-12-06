@@ -27,6 +27,9 @@ public class HDDController {
     @Autowired
     HDDService hddService;
 
+    @Autowired
+    AuditEventLogService AEservice;
+
     //get http request for all hdds
     @GetMapping("/hdds")
     public List<HDD> getAllHDDs(HttpServletRequest request) {
@@ -51,6 +54,9 @@ public class HDDController {
     public HDD createHDD(@Valid @RequestBody HDD hdd, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName() + " of HDD with model " + hdd.getModel(), admin,  request.getRemoteAddr());
+        
         //return the corresponding service logical function
         return hddService.createHDD(hdd);
     }
@@ -60,6 +66,8 @@ public class HDDController {
     public ResponseEntity<Void> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() + " of HDD with id " + hddId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         hddService.deleteHDD(hddId);
         //Check deletion

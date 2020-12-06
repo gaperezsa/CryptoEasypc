@@ -69,8 +69,9 @@ public class BuildController {
         }
         String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
         User user = userService.findByUsername( username );
+
         //log de auditoria
-        AEservice.Insert(this.getClass().getSimpleName(), user,  request.getRemoteAddr());
+        AEservice.Insert(this.getClass().getSimpleName() + " of Build with id " + build.getIdBuild(), user,  request.getRemoteAddr());
         return buildService.createBuild(build,user);
     }
 
@@ -79,6 +80,8 @@ public class BuildController {
     public ResponseEntity<Void> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+         //log de auditoria
+        AEservice.Delete(this.getClass().getSimpleName() + " of Build with id " + buildId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -101,7 +104,11 @@ public class BuildController {
         logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         BuildPOJO build = buildService.makeBuildFromParts(buildParts);
-        return createBuild(build, request).getIdBuild();
+        //log de auditoria
+        User invitado = userService.getUserById(1L);
+        Long idBuild = createBuild(build, request).getIdBuild();
+        AEservice.Insert(this.getClass().getSimpleName() + "of Build with id " + idBuild, invitado,  request.getRemoteAddr());
+        return idBuild;
     }
 
     //Get list of builds by user
