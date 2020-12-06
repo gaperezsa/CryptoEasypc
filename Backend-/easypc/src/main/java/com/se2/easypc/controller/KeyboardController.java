@@ -2,10 +2,12 @@ package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.Keyboard;
 import com.se2.easypc.service.KeyboardService;
-
+import com.se2.easypc.service.AuditEventLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.UserService;
 
 import java.util.List;
 
@@ -29,6 +31,9 @@ public class KeyboardController {
     
     @Autowired
     AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
     
     //get http request for all keyboards
     @GetMapping("/keyboards")

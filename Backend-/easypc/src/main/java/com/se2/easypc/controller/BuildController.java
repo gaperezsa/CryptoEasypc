@@ -81,6 +81,7 @@ public class BuildController {
         //append to log
         logger.trace( request.getRemoteAddr() );
          //log de auditoria
+         User admin = userService.getUserById(2L);
         AEservice.Delete(this.getClass().getSimpleName() + " of Build with id " + buildId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);

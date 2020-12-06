@@ -2,10 +2,25 @@ package com.se2.easypc.controller;
 
 import com.se2.easypc.service.CaseService;
 import com.se2.easypc.data_access.model.Case;
-
+import com.se2.easypc.service.AuditEventLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.se2.easypc.data_access.model.User;
+
+import com.se2.easypc.pojo.BuildByPartsPOJO;
+import com.se2.easypc.pojo.BuildPOJO;
+
+import com.se2.easypc.service.BuildService;
+import com.se2.easypc.service.UserService;
+
+
+import org.springframework.security.core.context.SecurityContextHolder;
+
+import com.se2.easypc.data_access.model.CPU;
+import com.se2.easypc.data_access.model.Motherboard;
+
+import com.se2.easypc.service.CPUService;
 
 import java.util.List;
 
@@ -14,6 +29,9 @@ import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+
+
 
 //permit cross origin requests
 @CrossOrigin
@@ -29,6 +47,9 @@ public class CaseController {
 
     @Autowired
     AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all cases
     @GetMapping("/cases")
