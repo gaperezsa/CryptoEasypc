@@ -33,5 +33,10 @@ public class AuditEvent {
 	public void setName(String name) {//priceSL setter
 		this.name = name;
     }
+
+    public AuditEvent(Long idAuditLog, String name) {
+        this.idAuditLog = idAuditLog;
+        this.name = name;
+    }
     
 }

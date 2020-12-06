@@ -3,6 +3,7 @@ package com.se2.easypc.controller;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
+import com.se2.easypc.service.AuditEventService;
 import com.se2.easypc.service.BuildService;
 import com.se2.easypc.service.UserService;
 
@@ -34,6 +35,10 @@ public class BuildController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    AuditEventService AEservice;
+
+
     //get http request for all builds
     @GetMapping("/builds")
     public List<BuildPOJO> getAllBuilds( HttpServletRequest request ) {
@@ -64,6 +69,8 @@ public class BuildController {
         }
         String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
         User user = userService.findByUsername( username );
+        //log de auditoria
+        AEservice.Insert(this.getClass().getSimpleName(), user,  request.getRemoteAddr());
         return buildService.createBuild(build,user);
     }
 

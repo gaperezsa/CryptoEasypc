@@ -2,7 +2,10 @@ package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.CPU;
 import com.se2.easypc.data_access.model.Motherboard;
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.AuditEventService;
 import com.se2.easypc.service.CPUService;
+import com.se2.easypc.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +31,12 @@ public class CPUController {
     @Autowired
     CPUService cpuService;
 
+    @Autowired
+    AuditEventService AEservice;
+
+    @Autowired
+    UserService userService;
+
     //get http request for all cpus
     @GetMapping("/cpus")
     public List<CPU> getAllCPUs( HttpServletRequest request ) {
@@ -52,6 +61,8 @@ public class CPUController {
     public CPU createCPU(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert("CLASE", admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return cpuService.createCPU(cpu);
     }

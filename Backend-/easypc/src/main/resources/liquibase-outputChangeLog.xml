@@ -999,7 +999,15 @@
     </changeSet>
     <!---->
     <!-- AUDIT EVENTS CRIPTO-->
-    <changeSet id="audit-event" author="Gabriel+Alejandra">
+    <changeSet id="audit-event" author="Gabriel+Alejandra4Ever">
         <sqlFile dbms="mysql" path="SQL_files/audit-event.sql"/>
     </changeSet>
+
+    <changeSet id="insert-audit-event" author="Gabriel+Alejandra4Ever">
+        <sqlFile dbms="mysql" path="SQL_files/insert-audit-event.sql"/>
+    </changeSet>
+
+
+
+
 </databaseChangeLog>

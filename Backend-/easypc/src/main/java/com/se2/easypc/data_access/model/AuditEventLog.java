@@ -38,12 +38,15 @@ public class AuditEventLog {//Build class definition
     @Column
     private String clientIp;
 
+    public void setId(Long id){
+        this.idLog= id;
+    }
 
-    public Long getIdAuditEventLog() {//priceSL getter
-		return idLog;
+    public AuditEvent getAuditEventLog() {//priceSL getter
+		return auditLog ;
 	}
-	public void setIdAuditEventLog(Long id) {//priceSL setter
-		this.idLog = id;
+	public void setAuditEventLog(AuditEvent ae) {//priceSL setter
+		this.auditLog = ae;
     }
 
     public Date getDate() {//priceSL getter
@@ -74,13 +77,8 @@ public class AuditEventLog {//Build class definition
 		this.clientIp= ip;
     }
 
-    public AuditEventLog(Long idLog, Date date, User user, AuditEvent auditLog, String detail, String clientIp) {
-        this.idLog = idLog;
-        this.date = date;
-        this.user = user;
-        this.auditLog = auditLog;
-        this.detail = detail;
-        this.clientIp = clientIp;
+    public AuditEventLog() {
+      
     }
 
 
