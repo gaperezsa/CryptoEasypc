@@ -1,8 +1,9 @@
 package com.se2.easypc.controller;
-
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.UserService;
 import com.se2.easypc.data_access.model.PowerSupply;
 import com.se2.easypc.service.PowerSupplyService;
-
+import com.se2.easypc.service.AuditEventLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,12 @@ public class PowerSupplyController {
     //declares corresponding service
     @Autowired
     PowerSupplyService powerSupplyService;
+
+    @Autowired
+    AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all power-supplies
     @GetMapping("/power-supplies")
@@ -51,6 +58,8 @@ public class PowerSupplyController {
     public PowerSupply createPowerSupply(@Valid @RequestBody PowerSupply powerSupply, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName()+ " of Power Supply with model "+powerSupply.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return powerSupplyService.createPowerSupply(powerSupply);
     }
@@ -60,6 +69,8 @@ public class PowerSupplyController {
     public ResponseEntity<Void> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of Power Supply with id "+ powerSupplyId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         powerSupplyService.deletePowerSupply(powerSupplyId);
         //Check deletion

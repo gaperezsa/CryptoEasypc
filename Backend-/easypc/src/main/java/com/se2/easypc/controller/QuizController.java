@@ -25,8 +25,10 @@ public class QuizController {
     private static final Logger logger = LogManager.getLogger();
 
      //declares corresponding service
-     @Autowired
-     BeginnerQuizService quizService;
+    @Autowired
+    BeginnerQuizService quizService;
+
+    
 
     //Get http request for build
     @PostMapping("/quiz-beginner")

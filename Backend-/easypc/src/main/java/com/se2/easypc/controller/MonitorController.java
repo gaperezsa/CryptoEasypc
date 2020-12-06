@@ -1,14 +1,16 @@
 package com.se2.easypc.controller;
-
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.UserService;
 import com.se2.easypc.data_access.model.Monitor;
 import com.se2.easypc.service.MonitorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import com.se2.easypc.service.AuditEventLogService;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,6 +26,12 @@ public class MonitorController {
     //declares corresponding service
     @Autowired
     MonitorService monitorService;
+
+    @Autowired
+    AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all monitors
     @GetMapping("/monitors")
@@ -49,6 +57,8 @@ public class MonitorController {
     public Monitor createMonitor(@Valid @RequestBody Monitor monitor,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName()+ " of Monitor with model "+monitor.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return monitorService.createMonitor(monitor);
     }
@@ -58,6 +68,8 @@ public class MonitorController {
     public ResponseEntity<Void> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of Monitor with id "+ monitorId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         monitorService.deleteMonitor(monitorId);
         //Check deletion

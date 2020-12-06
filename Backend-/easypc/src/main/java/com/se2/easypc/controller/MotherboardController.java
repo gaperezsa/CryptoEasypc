@@ -1,9 +1,10 @@
 package com.se2.easypc.controller;
-
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.UserService;
 import com.se2.easypc.data_access.model.CPU;
 import com.se2.easypc.data_access.model.Motherboard;
 import com.se2.easypc.service.MotherboardService;
-
+import com.se2.easypc.service.AuditEventLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,12 @@ public class MotherboardController {
     //declares corresponding service
     @Autowired
     MotherboardService motherboardService;
+
+    @Autowired
+    AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all motherboards
     @GetMapping("/motherboards")
@@ -51,6 +58,8 @@ public class MotherboardController {
     public Motherboard createMotherboard(@Valid @RequestBody Motherboard motherboard,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName()+ " of Motherboard with model "+motherboard.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return motherboardService.createMotherboard(motherboard);
     }
@@ -60,6 +69,8 @@ public class MotherboardController {
     public ResponseEntity<Void> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of Motherboard with id "+ motherboardId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         motherboardService.deleteMotherboard(motherboardId);
         //Check deletion
@@ -90,6 +101,8 @@ public class MotherboardController {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of Motherboard with id "+ motheboardId, admin,  request.getRemoteAddr());
         Motherboard motherboard = motherboardService.getMotherboardById(motheboardId);
         motherboard.setCompatibleCPUs(cpus);
         return motherboardService.createMotherboard(motherboard);

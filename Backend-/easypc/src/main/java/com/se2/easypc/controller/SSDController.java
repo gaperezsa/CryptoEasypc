@@ -1,8 +1,9 @@
 package com.se2.easypc.controller;
-
+import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.service.UserService;
 import com.se2.easypc.data_access.model.SSD;
 import com.se2.easypc.service.SSDService;
-
+import com.se2.easypc.service.AuditEventLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,12 @@ public class SSDController {
     //declares corresponding service
     @Autowired
     SSDService ssdService;
+
+    @Autowired
+    AuditEventLogService AEservice;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all ssds
     @GetMapping("/ssds")
@@ -51,6 +58,8 @@ public class SSDController {
     public SSD createSSD(@Valid @RequestBody SSD ssd, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Insert(this.getClass().getSimpleName()+ " of SSD with model "+ssd.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return ssdService.createSSD(ssd);
     }
@@ -60,6 +69,8 @@ public class SSDController {
     public ResponseEntity<Void> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of RAM with id "+ ssdId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         ssdService.deleteSSD(ssdId);
         //Check deletion
