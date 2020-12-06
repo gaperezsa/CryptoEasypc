@@ -1007,6 +1007,30 @@
         <sqlFile dbms="mysql" path="SQL_files/insert-audit-event.sql"/>
     </changeSet>
 
+<!--
+    <changeSet author="Alejandra" id="create-audit-eventlog">
+        <createTable tableName="auditeventlog">
+            <column autoIncrement="true" name="id_log" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="detail" type="VARCHAR(200)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_ip" type="VARCHAR(45)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_event" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_user" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+-->
 
 
 

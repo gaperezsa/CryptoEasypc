@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `easypc`.`auditevent` (
 DROP TABLE IF EXISTS `easypc`.`auditeventlog` ;
 
 CREATE TABLE IF NOT EXISTS `easypc`.`auditeventlog` (
-  `id_log` INT NOT NULL,
+  `id_log` INT NOT NULL AUTO_INCREMENT,
   `date` DATE NOT NULL,
   `detail` VARCHAR(200) NOT NULL,
   `client_ip` VARCHAR(45) NOT NULL,

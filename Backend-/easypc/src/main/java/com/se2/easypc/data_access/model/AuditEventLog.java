@@ -35,12 +35,10 @@ public class AuditEventLog {//Build class definition
     @Column
     private String detail;
 
-    @Column
+    @Column(name = "client_ip")
     private String clientIp;
 
-    public void setId(Long id){
-        this.idLog= id;
-    }
+
 
     public AuditEvent getAuditEventLog() {//priceSL getter
 		return auditLog ;

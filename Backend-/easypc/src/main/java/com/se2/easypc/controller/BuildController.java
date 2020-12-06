@@ -3,7 +3,7 @@ package com.se2.easypc.controller;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.AuditEventService;
+import com.se2.easypc.service.AuditEventLogService;
 import com.se2.easypc.service.BuildService;
 import com.se2.easypc.service.UserService;
 
@@ -36,7 +36,7 @@ public class BuildController {
     UserService userService;
 
     @Autowired
-    AuditEventService AEservice;
+    AuditEventLogService AEservice;
 
 
     //get http request for all builds

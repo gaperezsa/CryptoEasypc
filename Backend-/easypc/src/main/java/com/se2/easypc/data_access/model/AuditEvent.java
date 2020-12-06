@@ -34,9 +34,8 @@ public class AuditEvent {
 		this.name = name;
     }
 
-    public AuditEvent(Long idAuditLog, String name) {
-        this.idAuditLog = idAuditLog;
-        this.name = name;
+    public AuditEvent() {
+
     }
     
 }

@@ -12,3 +12,18 @@
 2020-12-05 21:11:34 WARN  com.se2.easypc.service.AuditEventService AuditEventService Insert:45 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
 2020-12-05 21:25:49 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
 2020-12-05 21:25:49 WARN  com.se2.easypc.service.AuditEventService AuditEventService Insert:55 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-12-05 23:06:05 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:06:05 WARN  com.se2.easypc.service.AuditEventLogService AuditEventLogService Insert:59 - org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : com.se2.easypc.data_access.model.AuditEvent; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.se2.easypc.data_access.model.AuditEvent
+2020-12-05 23:09:48 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:09:48 WARN  com.se2.easypc.service.AuditEventLogService AuditEventLogService Insert:59 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-12-05 23:15:17 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:15:17 WARN  com.se2.easypc.service.AuditEventLogService AuditEventLogService Insert:59 - org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+2020-12-05 23:16:41 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:16:41 WARN  com.se2.easypc.service.AuditEventLogService AuditEventLogService Insert:60 - org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+2020-12-05 23:19:24 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:19:24 WARN  com.se2.easypc.service.AuditEventLogService AuditEventLogService Insert:59 - org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+2020-12-05 23:31:58 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:42:41 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:43:12 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:48:05 TRACE com.se2.easypc.controller.CPUController CPUController createCPU:63 - 0:0:0:0:0:0:0:1
+2020-12-05 23:49:46 TRACE com.se2.easypc.controller.CPUController CPUController deleteCPU:74 - 0:0:0:0:0:0:0:1

@@ -3,7 +3,7 @@ package com.se2.easypc.controller;
 import com.se2.easypc.data_access.model.CPU;
 import com.se2.easypc.data_access.model.Motherboard;
 import com.se2.easypc.data_access.model.User;
-import com.se2.easypc.service.AuditEventService;
+import com.se2.easypc.service.AuditEventLogService;
 import com.se2.easypc.service.CPUService;
 import com.se2.easypc.service.UserService;
 
@@ -32,7 +32,7 @@ public class CPUController {
     CPUService cpuService;
 
     @Autowired
-    AuditEventService AEservice;
+    AuditEventLogService AEservice;
 
     @Autowired
     UserService userService;
@@ -62,7 +62,7 @@ public class CPUController {
         //append to log
         logger.trace( request.getRemoteAddr() );
         User admin = userService.getUserById(2L);
-        AEservice.Insert("CLASE", admin,  request.getRemoteAddr());
+        AEservice.Insert(this.getClass().getSimpleName()+ " of CPU with model "+cpu.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return cpuService.createCPU(cpu);
     }
@@ -74,6 +74,8 @@ public class CPUController {
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         cpuService.deleteCPU(cpuId);
+        User admin = userService.getUserById(2L);
+        AEservice.Delete(this.getClass().getSimpleName() +" of CPU with id "+ cpuId, admin,  request.getRemoteAddr());
         //Check deletion
         return ResponseEntity.ok().build();
     }
